@@ -2,20 +2,9 @@ package Projeto;
 import java.util.Scanner;
 
  public class Cadastro extends LojaOnline{
-
-
 	
-
-
-
-		private String usuario;
 		private String pagamento;
-		private String senha;
 		private String ID;
-		
-		
-		 
-		
 		
 	boolean confirmarCadastro() {
 	
@@ -40,6 +29,7 @@ import java.util.Scanner;
 		
 		}else {
 			
+			System.out.println("Cliente não desejou se cadastrar");
 			cadastrar = false;
 		}
 		
@@ -50,10 +40,8 @@ import java.util.Scanner;
 	
 	void cadastrando(){
 		
-		Scanner ler = new Scanner (System.in);
-		
-		
-			
+		Scanner ler = new Scanner(System.in);
+			if (this.confirmarCadastro() == true) {
 			System.out.println("Digite o usuário: ");
 			String usuario1 = ler.nextLine();
 			this.setUsuario(usuario1);
@@ -62,49 +50,21 @@ import java.util.Scanner;
 			String senha1 = ler.nextLine();
 			this.setSenha(senha1);
 			
+	
+			System.out.println("Usuario: " + this.getUsuario());
+			System.out.println("Senha: "+ this.getSenha());
+			System.out.println("Bem vindo!");
+			}
 
 		
-		
+	
 	}
 		  
 		  
-		  
-		
-		  
-		
-			
-			
-		
-	void Concluido(){
-			
-		System.out.println("Cliente cadastrado com sucesso !");
-		
-			
-	}
+		 
 
 
 
-
-
-
-
-
-
-	public String getUsuario() {
-		return usuario;
-	}
-
-
-
-
-
-
-
-
-
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
-	}
 
 
 
@@ -129,33 +89,6 @@ import java.util.Scanner;
 	public void setPagamento(String pagamento) {
 		this.pagamento = pagamento;
 	}
-
-
-
-
-
-
-
-
-
-	public String getSenha() {
-		return senha;
-	}
-
-
-
-
-
-
-
-
-
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
-
-	
-
 
 
 

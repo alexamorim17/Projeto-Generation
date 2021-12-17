@@ -1,24 +1,19 @@
 package Projeto;
 
-public class Finalização {
+public class Finalização extends LojaOnline{
 	
 	public static void main(String[] args) {
-		Cadastro c = new Cadastro();
-		Pagamento p = new Pagamento();
+
+		Cadastro c = new Cadastro ();
 		
 		
-		if (c.confirmarCadastro() == true) {
-			c.cadastrando();
-			c.Concluido();
-			
-		}else {
-			System.out.println("Cliente não aceitou");
+		c.cadastrando();
 		}
+	
+	
+	
+	
 		
-		System.out.println("Usuário: "+c.getUsuario());
-		System.out.println("Senha: "+c.getSenha());
-			
-		}
 		
 	}
 	
