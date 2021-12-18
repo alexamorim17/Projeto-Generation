@@ -4,10 +4,12 @@ public class Finalização extends LojaOnline{
 	
 	public static void main(String[] args) {
 
-		Cadastro c = new Cadastro ();
+		
+		Pagamento p = new Pagamento ();
+		Cadastro c = new Cadastro();
 		
 		
-		c.cadastrando();
+		p.ProdutosOutlet();
 		}
 	
 	

@@ -9,9 +9,9 @@ import java.util.Scanner;
 	boolean confirmarCadastro() {
 	
 	Scanner ler = new Scanner (System.in);
-	boolean cadastrar;
+	boolean cadastrar = false;
 	int pergunta; 
-	int pergunta2;
+	
 		
 		
 		
@@ -41,7 +41,8 @@ import java.util.Scanner;
 	void cadastrando(){
 		
 		Scanner ler = new Scanner(System.in);
-			if (this.confirmarCadastro() == true) {
+			if(this.confirmarCadastro()) {
+				System.out.println(this.confirmarCadastro());
 			System.out.println("Digite o usuário: ");
 			String usuario1 = ler.nextLine();
 			this.setUsuario(usuario1);
@@ -54,6 +55,8 @@ import java.util.Scanner;
 			System.out.println("Usuario: " + this.getUsuario());
 			System.out.println("Senha: "+ this.getSenha());
 			System.out.println("Bem vindo!");
+			}else {
+				this.confirmarCadastro();
 			}
 
 		
