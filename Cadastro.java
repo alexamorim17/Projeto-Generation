@@ -4,7 +4,6 @@ import java.util.Scanner;
  public class Cadastro extends LojaOnline{
 	
 		private String pagamento;
-		private String ID;
 		
 	
 	

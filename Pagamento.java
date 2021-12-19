@@ -50,10 +50,13 @@ public class Pagamento extends LojaOnline{
 	        System.out.println("Escolha uma cor: "+Cores);
 	        escolha3 = ler.nextInt();
 	        
-	        
+	        if(escolha2 == 1 || escolha2 == 3) {
 	        System.out.println("Escolha um tamanho: "+Tamanho);
 	        escolha4 = ler.nextInt();
-	        
+	        }else {
+	        	 System.out.println("Escolha um tamanho: "+"4-Tamanho Único");
+	        	 escolha4 = ler.nextInt();
+	        }
 	        
 	        System.out.println("Digite a quantidade: ");
 	        quantidade = ler.nextInt();
@@ -92,6 +95,8 @@ public class Pagamento extends LojaOnline{
 	        }else if (escolha4 == 3) {
 	        	this.setTamanho("G");
 	  
+	        }else {
+	        	this.setTamanho("Tamanho Único");
 	        }
 	        //Definindo Preço
 	        

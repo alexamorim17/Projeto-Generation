@@ -16,6 +16,8 @@ public class Finalização extends LojaOnline{
 		
 		Pagamento p = new Pagamento ();
 		Cadastro c = new Cadastro();
+		Compra co = new Compra();
+		
 		
 		
 		Collection<String> nomes = new ArrayList();
@@ -29,8 +31,10 @@ public class Finalização extends LojaOnline{
 			nomes.add(p.getProduto());
 		
 		}
+	
 		System.out.println("Lista de compras: "+nomes);
-		nomes.contains("Camisa");
+		co.FazendoPagamento();
+		
 	}
 
 }
