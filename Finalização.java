@@ -1,23 +1,40 @@
 package Projeto;
 
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 public class Finalização extends LojaOnline{
 	
 	public static void main(String[] args) {
-
+		
+		boolean repetir = true;
+		
 		
 		Pagamento p = new Pagamento ();
 		Cadastro c = new Cadastro();
 		
 		
-		p.ProdutosOutlet();
+		Collection<String> nomes = new ArrayList();
+		
+		
+		
+		
+		c.cadastrando();
+		while(p.getRepetidor() == 0) {
+			p.ProdutosOutlet();
+			nomes.add(p.getProduto());
+		
 		}
-	
-	
-	
-	
-		
-		
+		System.out.println("Lista de compras: "+nomes);
+		nomes.contains("Camisa");
 	}
+
+}
+	
 	
 	
 	

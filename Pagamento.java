@@ -1,6 +1,8 @@
 package Projeto;
 
+
 import java.util.Scanner;
+
 
 public class Pagamento extends LojaOnline{
 	
@@ -8,12 +10,13 @@ public class Pagamento extends LojaOnline{
 	Cadastro c = new Cadastro();
 	
 	
-	int total = 0;
     private String cor;
     private String tamanho;
     private int qnt;
     private double preco;
     private String produto;
+    private int repetidor = 0;
+    private double total;
 	
 	
 		public void ProdutosOutlet() {
@@ -21,45 +24,110 @@ public class Pagamento extends LojaOnline{
 			Cadastro c = new Cadastro();
 	    	Scanner ler = new Scanner(System.in);
 	    	String escolha;
-	    	int x;
+	    	int x = 0;
 	    	String selecao;
 	    	int quantidade = 0;
+	    	double total = 0;
+	    	double total2 = 0;
+	    	double preco = 0;
+	    	int escolha2;
+	    	int escolha3;
+	    	int escolha4;
 	    	String cor1;
 	    	String tamanho1;
-	 
+	    	String Cores = ("1-Preto,"+ " 2-Azul,"+" 3-Vermelho,"+" 4-Rosa,"+" 5-Branco");    
+	    	String Tamanho = ("1-P,"+ " 2-M,"+" 3-G");
 	    	
 	 
-	    	c.cadastrando();
-	    	System.out.println("Digite Camisa, Mochila, Boné ou Garrafa térmica: ");
-	    	escolha = ler.nextLine();
-	    	this.setProduto(escolha);
+	
+	    	System.out.println("----------------------\nPedido\n----------------------");
+	    	System.out.println("Digite 1-Camisa, 2-Mochila, 3-Boné ,4-Garrafa térmica: ");
+	    	System.out.println("Quantidade = 0 para finalizar a compra.");
+	    	escolha2 = ler.nextInt();
 	    	
-	    	
-	       String Cores = ("Preto,"+ " Azul,"+" Vermelho,"+" Rosa,"+" Branco");
-	       String Tamanho = ("P,"+ "M,"+" G");
-	        
-	        
-	        
-	        
+	       
 	    
 	        System.out.println("Escolha uma cor: "+Cores);
-	        cor1 = ler.nextLine();
-	        this.setCor(cor1);
+	        escolha3 = ler.nextInt();
+	        
+	        
 	        System.out.println("Escolha um tamanho: "+Tamanho);
-	        tamanho1 = ler.nextLine();
-	        this.setTamanho(tamanho1);
+	        escolha4 = ler.nextInt();
+	        
 	        
 	        System.out.println("Digite a quantidade: ");
 	        quantidade = ler.nextInt();
 	        this.setQnt(quantidade);
 	        
+	    	//Definindo Produto
+	        if(escolha2 == 1) {
+	        	this.setProduto("Camisa");
+	        }else if (escolha2 == 2) {
+	        	this.setProduto("Mochila");
+	        }else if (escolha2 ==3) {
+	        	this.setProduto("Boné");
+	        }else if (escolha2 ==4){
+	        	this.setProduto("Garrafa térmica");
+	        }
+	        //Definindo cor
 	        
-	        System.out.println("----------------------\nPedido\n----------------------");
+	        if(escolha3 == 1) {
+	        	this.setCor("Preto");
+	        }else if (escolha3 == 2) {
+	        	this.setCor("Azul");
+	        }else if (escolha3 ==3) {
+	        	this.setCor("Vermelho");
+	        }else if (escolha3 ==4){
+	        	this.setCor("Rosa");
+	        }else if (escolha3 == 5) {
+	        	this.setCor("Branco");
+	        }
+	        
+	        //Definindo tamanho
+	        
+	        if(escolha4 == 1) {
+	        	this.setTamanho("P");
+	        }else if (escolha4 == 2) {
+	        	this.setTamanho("M");
+	        }else if (escolha4 == 3) {
+	        	this.setTamanho("G");
+	  
+	        }
+	        //Definindo Preço
+	        
+	        if(escolha2 == 1) {
+	        	preco = 29.90;
+	        }else if (escolha2 == 2) {
+	        	preco = 80.00;
+	        }else if (escolha2 ==3) {
+	        	preco = 25.00;
+	        }else if (escolha2 ==4){
+	        	preco = 35.00;
+	        }
+	        double n1 = preco;
+	        double n2 = this.getQnt();
+	        double valor = n1 * n2;
+	        this.setTotal(valor + this.getTotal());
+	        
+	
+	       
+	        
+	        System.out.println("----------------------\nConcluido\n----------------------");
 	        System.out.println("Produto selecionado: "+this.getProduto());
 	        System.out.println("Cor selecionada: " +this.getCor());
 	        System.out.println("Tamanho selecionado: "+this.getTamanho());
 	        System.out.println("Quantidade: "+ this.getQnt());
+	        System.out.println("Preço: R$" + preco);
+	        System.out.println("Total: R$" + this.getTotal());
 	        
+	        
+	        if(quantidade == 0) {
+	        	x= 1;
+	        	this.setRepetidor(x);
+	        }
+	        
+	        
+	    	
 	    }
 
 	    private void escolha() {
@@ -106,17 +174,6 @@ public class Pagamento extends LojaOnline{
 	        this.preco = preco;
 	    }
 
-
-		public int getTotal() {
-			return total;
-		}
-
-
-		public void setTotal(int total) {
-			this.total = total;
-		}
-
-
 	    public String getProduto() {
 		return produto;
 	}
@@ -124,6 +181,22 @@ public class Pagamento extends LojaOnline{
 	    public void setProduto(String produto) {
 		this.produto = produto;
 	}
+
+		public int getRepetidor() {
+			return repetidor;
+		}
+
+		public void setRepetidor(int repetidor) {
+			this.repetidor = repetidor;
+		}
+
+		public double getTotal() {
+			return total;
+		}
+
+		public void setTotal(double total) {
+			this.total = total;
+		}
 
 
 	    

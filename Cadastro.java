@@ -6,43 +6,12 @@ import java.util.Scanner;
 		private String pagamento;
 		private String ID;
 		
-	boolean confirmarCadastro() {
 	
-	Scanner ler = new Scanner (System.in);
-	boolean cadastrar = false;
-	int pergunta; 
-	
-		
-		
-		
-		
-		
-		
-		System.out.println("Deseja se cadastrar ?: |1|Sim|2|Não ");
-		pergunta = ler.nextInt();
-	
-	
-		
-		if(pergunta == 1) {
-		
-			cadastrar = true;
-		
-		}else {
-			
-			System.out.println("Cliente não desejou se cadastrar");
-			cadastrar = false;
-		}
-		
-	return cadastrar;
-	
-	
-}
 	
 	void cadastrando(){
 		
 		Scanner ler = new Scanner(System.in);
-			if(this.confirmarCadastro()) {
-				System.out.println(this.confirmarCadastro());
+			System.out.println("Bem vindo ao Outlet Generation!");
 			System.out.println("Digite o usuário: ");
 			String usuario1 = ler.nextLine();
 			this.setUsuario(usuario1);
@@ -55,9 +24,6 @@ import java.util.Scanner;
 			System.out.println("Usuario: " + this.getUsuario());
 			System.out.println("Senha: "+ this.getSenha());
 			System.out.println("Bem vindo!");
-			}else {
-				this.confirmarCadastro();
-			}
 
 		
 	
