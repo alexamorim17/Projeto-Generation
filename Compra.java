@@ -172,14 +172,21 @@ package Projeto;
 	        System.out.println("O seu pedido será enviado para o CEP: " + cep);        
 	        System.out.println("Endereço: " + endereço);
 	        System.out.println();
-	        System.out.println("Parabéns! Frete gratis para a primeira compra :");
+	        this.Concluido();
+	        
+		}
+
+		@Override
+		void Concluido() {
+			System.out.println("Parabéns! Frete gratis para a primeira compra :");
 	        System.out.println("O pedido será enviado para o seu endereço em até 5 dias úteis");
 	        System.out.println("Volte sempre!");
+			
 		}
-	       
 		
-
 	}
+
+	
 
 
 

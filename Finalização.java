@@ -37,6 +37,12 @@ public class Finalização extends LojaOnline{
 		
 	}
 
+	@Override
+	void Concluido() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
 	
 	

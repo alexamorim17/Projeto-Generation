@@ -116,14 +116,7 @@ public class Pagamento extends LojaOnline{
 	        
 	
 	       
-	        
-	        System.out.println("----------------------\nConcluido\n----------------------");
-	        System.out.println("Produto selecionado: "+this.getProduto());
-	        System.out.println("Cor selecionada: " +this.getCor());
-	        System.out.println("Tamanho selecionado: "+this.getTamanho());
-	        System.out.println("Quantidade: "+ this.getQnt());
-	        System.out.println("Preço: R$" + preco);
-	        System.out.println("Total: R$" + this.getTotal());
+	        this.Concluido();
 	        
 	        
 	        if(quantidade == 0) {
@@ -202,7 +195,18 @@ public class Pagamento extends LojaOnline{
 		public void setTotal(double total) {
 			this.total = total;
 		}
-
+		@Override
+		void Concluido() {
+			System.out.println("----------------------\nConcluido\n----------------------");
+	        System.out.println("Produto selecionado: "+this.getProduto());
+	        System.out.println("Cor selecionada: " +this.getCor());
+	        System.out.println("Tamanho selecionado: "+this.getTamanho());
+	        System.out.println("Quantidade: "+ this.getQnt());
+	        System.out.println("Preço: R$" + preco);
+	        System.out.println("Total: R$" + this.getTotal());
+	        
+			
+		}
 
 	    
 	    

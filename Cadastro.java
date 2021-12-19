@@ -5,7 +5,7 @@ import java.util.Scanner;
 	
 		private String pagamento;
 		
-	
+		
 	
 	void cadastrando(){
 		
@@ -22,12 +22,14 @@ import java.util.Scanner;
 	
 			System.out.println("Usuario: " + this.getUsuario());
 			System.out.println("Senha: "+ this.getSenha());
-			System.out.println("Bem vindo!");
+			this.Concluido();
 
 		
 	
 	}
-		  
+	
+
+
 		  
 		 
 
@@ -56,6 +58,26 @@ import java.util.Scanner;
 
 	public void setPagamento(String pagamento) {
 		this.pagamento = pagamento;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	@Override
+	void Concluido() {
+		System.out.println("Bem vindo!");
+		
 	}
 
 

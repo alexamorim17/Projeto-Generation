@@ -6,7 +6,7 @@ public abstract class LojaOnline {
 	private String senha;
 	private String Cpf;
 
-	
+	abstract void Concluido();
 
 	public String getUsuario() {
 		return usuario;
