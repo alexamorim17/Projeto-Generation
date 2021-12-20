@@ -165,7 +165,7 @@ package Projeto;
 	        System.out.println("Digite o seu CEP:");
 	        cep = ler.next();
 	        System.out.println("Digite o seu endereço:");
-	        endereço = ler.next();
+	        endereço = ler.nextLine();
 	        System.out.println();
 			System.out.println("Confirmando...");
 			System.out.println();

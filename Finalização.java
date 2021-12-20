@@ -20,7 +20,7 @@ public class Finalização extends LojaOnline{
 		
 		
 		
-		Collection<String> nomes = new ArrayList();
+		Collection<String> nomes = new ArrayList<String>();
 		
 		
 		

@@ -10,7 +10,7 @@ import java.util.Scanner;
 	void cadastrando(){
 		
 		Scanner ler = new Scanner(System.in);
-			System.out.println("Bem vindo ao Outlet Generation!");
+			System.out.println("Bem vinde ao Outlet Generation!");
 			System.out.println("Digite o usuário: ");
 			String usuario1 = ler.nextLine();
 			this.setUsuario(usuario1);
@@ -76,7 +76,7 @@ import java.util.Scanner;
 
 	@Override
 	void Concluido() {
-		System.out.println("Bem vindo!");
+		System.out.println("Bem vinde!");
 		
 	}
 
